@@ -1,0 +1,23 @@
+modules:
+  jira:adminPage:
+    - key: newapp-hello-world-admin-page
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: newapp
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs20.x
+  id: ari:cloud:ecosystem::app/d2ddca7a-5499-4862-932e-f9faa1759ebd
+
+permissions:
+  external:
+    images:
+      - 'src/frontend/assets/UserEngagement.png'
